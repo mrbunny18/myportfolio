@@ -1,0 +1,159 @@
+
+:root {
+    --primary-color: #c6c3c3;
+    --second-color: #ffffff;
+    --black-color: #000000;
+    --hover: rgba(255, 255, 255, 0.4)
+}
+
+body {
+    margin: 0;
+    padding: 2%;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/002/463/630/large_2x/jungle-wild-nature-green-color-scene-vector.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--second-color); 
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--hover);
+    padding: 10px;
+}
+
+.navbar a {
+    color: #000000;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: transform 0,3s ease, box-shadow 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3)
+}
+
+#author {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    color: #333;
+    margin: 0%;
+    margin-bottom: 0%;
+}
+
+
+.features {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem;
+    font-style: italic;
+    color: #333;
+    padding: 0%;
+    letter-spacing: 1px;
+    margin: 0%;
+    padding: 0%;
+    line-height: 0;
+}
+
+#award-list{
+    list-style-type: none;
+    display: grid;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.award {
+    display: grid;
+    border: 2px solid var(--second-color);
+    padding: 10px;
+    list-style-type: none;
+    width: 13rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background-color: var(--hover);
+    color: var(--black-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+footer {
+    background-color: rgba(255, 255, 255, .6);
+    margin: 50px 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+footer a {
+    display: flex;
+    color: #000000;
+    font-weight: 500;
+}
+
+.text {
+    border: 2px solid var(--second-color);
+    padding: 10px;
+    list-style-type: none;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #000000;
+}
+
+.certificate {
+    display: block;
+    margin: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4x 8px rgba(0, 0, 0, 0.1);
+}
+
+.text a {
+    color: #000000;
+}
+@media screen and (max-width: 765px) {
+    #award-list {
+        grid-template-columns: auto;
+        .certificate {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@media screen and (min-width: 766px) and (max-width: 1024px) {
+    #award-list {
+        grid-template-columns: repeat(2, 1fr);
+        .rotating-image {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
+    #award-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
